@@ -1,1 +1,13 @@
 <%= link_to "New Project", new_project_path %>
+<h2>hello</h2>
+<!--add a list of all project here-->
+<!--loop through @projects and for each project add a link that takes to show-->
+<div id="projects">
+  <h3>list of projects</h3>
+  <% @projects.each do |project| %>
+    <h2><%= link_to project.name, project %></h2>
+    <p><%= project.description %></p>
+  <% end %>
+</div>
+
+
