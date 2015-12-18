@@ -1,6 +1,6 @@
 <% title(@project.name, "Projects") %>
 
-<div class="page-header">
+<header>
   <h1><%= @project.name %></h1>
   <p><%= @project.description %></p>
   <ul class="actions">
@@ -10,6 +10,6 @@
                      data: {confirm: "Are you sure"},
                      class: "delete" %></li>
   </ul>
-</div>
+</header>
 
 

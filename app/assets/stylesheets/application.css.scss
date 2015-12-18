@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "projects";
 
 .page-header {
   position: relative;
@@ -12,6 +13,16 @@
 
   h1, h2, h3, h4, h5, h6 {
     max-width: 55%;
+  }
+}
+
+header {
+  @extend .page-header;
+  position: relative;
+  padding-bottom: 0px;
+
+  &:first-child {
+    margin-top: 20px;
   }
 }
 
