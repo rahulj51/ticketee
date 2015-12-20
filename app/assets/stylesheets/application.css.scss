@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "projects";
+@import "responsive";
 
 body {
   padding-top: 70px;
@@ -13,10 +14,6 @@ body {
 
   &:first-child {
     margin-top: 20px;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    max-width: 55%;
   }
 }
 
@@ -33,11 +30,6 @@ header {
 ul.actions {
   @extend .list-unstyled;
   @extend .list-inline;
-  position: absolute;
-  bottom: -2px;
-  right: 2px;
-  max-width: 45%;
-  text-align: right;
 }
 
 a.new, a.edit, a.delete {
@@ -85,3 +77,6 @@ form {
   max-width: 500px;
 }
 
+@media(max-width: 500px) {
+  p { color: red }
+}
