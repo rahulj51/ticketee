@@ -8,25 +8,27 @@
 
 <!--add a list of all project here-->
 <!--loop through @projects and for each project add a link that takes to show-->
-<table class="table">
-  <thead>
-    <tr>
-      <td>Project Name</td>
-      <td>Description</td>
-      <td>Tickets</td>
-    </tr>
-  </thead>
-  <tbody>
-    <div id="projects">
-      <% @projects.each do |project| %>
-          <tr>
-            <td><%= link_to project.name, project %></td>
-            <td><%= project.description %></td>
-            <td><%= project.tickets.count %></td>
-          </tr>
-      <% end %>
-    </div>
-  </tbody>
-</table>
+<% if @projects.count > 0 %>
+    <table class="table">
+      <thead>
+      <tr>
+        <td>Project Name</td>
+        <td>Description</td>
+        <td>Tickets</td>
+      </tr>
+      </thead>
+      <tbody>
+      <div id="projects">
+        <% @projects.each do |project| %>
+            <tr>
+              <td><%= link_to project.name, project %></td>
+              <td><%= project.description %></td>
+              <td><%= project.tickets.count %></td>
+            </tr>
+        <% end %>
+      </div>
+      </tbody>
+    </table>
+<% end %>
 
 
