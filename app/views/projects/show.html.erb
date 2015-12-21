@@ -20,13 +20,20 @@
   </ul>
 </header>
 
-<ul id="tickets">
-  <% @project.tickets.each do |ticket| %>
-      <li>
-        #<%= ticket.id %> -
-        <%= link_to ticket.name, [@project, ticket] %>
-      </li>
-  <% end %>
-</ul>
-
+<table class="table table-condensed">
+  <thead>
+  <tr>
+    <td>Ticket Id</td>
+    <td>Name</td>
+  </tr>
+  </thead>
+  <tbody>
+    <% @project.tickets.each do |ticket| %>
+      <tr>
+        <td><%= ticket.id %></td>
+        <td><%= link_to ticket.name, [@project, ticket] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
